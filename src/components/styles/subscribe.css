@@ -1,0 +1,132 @@
+.subs {
+    width: 100%;
+    min-height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subsTitle {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 5vh;
+}
+
+.subsTitle>h2 {
+    color: var(--color-text-dark);
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 36px;
+    padding-bottom: 1vh;
+}
+
+.subsDivider {
+    width: 59px;
+    border-bottom: var(--divider-bg-light);
+}
+
+.subsInputSection {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.subsInputContainer {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #C5C5C5;
+    border-radius: 8px;
+    width: 28.8vw;
+}
+
+.subsInput {
+    width: 100%;
+    height: 48px;
+    background-color: transparent;
+    border: none;
+    color: var(--color-text-dark);
+    font-family: 'Montserrat';
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 1vw;
+}
+
+.subsInput::placeholder {
+    font-weight: 700;
+    color: var(--color-credits);
+    opacity: 1;
+}
+
+.subsInput:-ms-input-placeholder {
+    font-weight: 700;
+    color: var(--color-credits);
+}
+
+.subsInput::-ms-input-placeholder {
+    font-weight: 700;
+    color: var(--color-credits);
+}
+
+.subsBtn {
+    width: 10.6vw;
+    height: 48px;
+    border-style: none;
+    border-radius: 0px 4px 4px 0px;
+    font-family: 'Montserrat';
+    color: var(--color-text-dark);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: var(--btn-disabled);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1400px) {
+    .subsInputContainer {
+        width: 60vw;
+    }
+
+    .subsBtn {
+        width: 33vw;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .subs {
+        min-height: 24vh;
+    }
+
+    .subsTitle>h2 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .subsDivider {
+        width: 40px;
+    }
+
+    .subsInputContainer {
+        border-radius: 4px;
+        width: 87.4vw;
+    }
+
+    .subsInput {
+        color: var(--color-text-dark);
+        height: 48px;
+        font-size: 12px;
+        font-weight: 500;
+        padding-left: 3vw;
+    }
+
+    .subsBtn {
+        font-size: 12px;
+        border-radius: 0px 2px 2px 0px;
+    }
+}

@@ -1,0 +1,171 @@
+.quote {
+    width: 100%;
+    min-height: 68vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: url('../../assets/images/quote.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.quoteContainer1 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.quoteTitle {
+    padding-top: 8vh;
+    padding-left: 8vw;
+}
+
+.quoteTitle>h2 {
+    color: var(--color-text-light);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    padding-bottom: 1vh;
+}
+
+.quoteDivider {
+    width: 59px;
+    border-bottom: 3px solid #FFFFFF;
+}
+
+.quoteContainer2 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quoteForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 28.9vw;
+    height: 576px;
+    background-color: var(--form-bg);
+    border-radius: 8px;
+    gap: 5vh;
+}
+
+.quoteFormInput {
+    font-family: 'Montserrat';
+    color: var(--color-text-dark);
+    background-color: transparent;
+    padding-left: 0.5vw;
+    padding-bottom: 0.5vh;
+    border: none;
+    border-bottom: 1px solid #BECEC7;
+    width: 21.4vw;
+    height: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.quoteForm>select {
+    font-family: 'Montserrat';
+    color: var(--color-text-dark);
+    background-color: transparent;
+    padding-left: 0.3vw;
+    padding-bottom: 0.5vh;
+    border: none;
+    border-bottom: 1px solid #BECEC7;
+    width: 21.4vw;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.quoteFormBtn {
+    font-family: 'Montserrat';
+    color: var(--color-text-dark);
+    width: 21.4vw;
+    height: 56px;
+    background: #C5C5C5;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .quote {
+        flex-direction: column;
+        min-height: 80vh;
+    }
+
+    .quoteTitle {
+        padding-top: 5vh;
+        padding-left: 5vw;
+    }
+
+    .quoteForm {
+        width: 87.5vw;
+        height: 41.4vh;
+        gap: 3vh;
+    }
+
+
+    .quoteFormInput {
+        width: 79vw;
+        height: 3vh;
+    }
+
+    .quoteForm>select {
+        padding-left: 0vw;
+        width: 79vw;
+        height: 3vh;
+    }
+
+    .quoteFormBtn {
+        width: 79vw;
+        height: 6.6vh;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .quote {
+        background-image: url('../../assets/images/quote_mobile.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .quoteTitle {
+        padding-top: 5vh;
+        padding-left: 5vw;
+    }
+
+    .quoteTitle>h2 {
+        font-size: 22px;
+        line-height: 24px;
+    }
+
+    .quoteDivider {
+        width: 40px;
+    }
+
+    .quoteFormInput {
+        font-size: 12px;
+        line-height: 140%;
+    }
+
+    .quoteForm>select {
+        font-size: 12px;
+        line-height: 140%;
+    }
+}

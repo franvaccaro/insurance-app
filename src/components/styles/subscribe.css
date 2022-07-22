@@ -85,6 +85,12 @@
     line-height: 24px;
     background-color: var(--btn-disabled);
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.subsBtn:hover {
+    color: var(--color-text-light);
+    background: var(--color-primary);
 }
 
 @media screen and (max-width: 1400px) {

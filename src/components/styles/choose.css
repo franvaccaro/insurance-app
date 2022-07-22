@@ -62,6 +62,22 @@
     align-self: flex-end;
 }
 
+.chooseViewAll>button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 0.5vw;
+    font-family: 'Montserrat';
+    border: none;
+    background: none;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+}
+
 @media screen and (max-width: 650px) {
     .chooseContainer {
         min-height: 80vh;
@@ -91,6 +107,9 @@
 
     .chooseViewAll {
         align-self: center;
+    }
+
+    .chooseViewAll>button {
         font-size: 12px;
         line-height: 15px;
     }

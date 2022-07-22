@@ -1,0 +1,16 @@
+.Sidedrop {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0vh;
+    left: 280px;
+    width: 180px;
+    height: 180px;
+    background-color: var(--color-text-dark);
+    opacity: 1;
+    border-radius: 0px 0px 8px 8px;
+    padding: 12px 0px 24px;
+    color: var(--color-primary);
+}

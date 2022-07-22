@@ -9,6 +9,14 @@
     background-size: cover;
 }
 
+.quoteFilter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1;
+    background: linear-gradient(90deg, rgba(44, 56, 90, 0.25) 0%, rgba(192, 85, 80, 0.25) 100%);
+}
+
 .quoteContainer1 {
     display: flex;
     flex: 1;
@@ -88,13 +96,20 @@
     color: var(--color-text-dark);
     width: 21.4vw;
     height: 56px;
-    background: #C5C5C5;
+    background-color: #C5C5C5;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
+    will-change: background-color;
+    transition: 0.2s ease-in-out;
+}
+
+.quoteFormBtn:hover {
+    color: var(--color-text-light);
+    background-color: var(--color-primary);
 }
 
 textarea:focus,
@@ -107,6 +122,11 @@ select:focus {
     .quote {
         flex-direction: column;
         min-height: 80vh;
+    }
+
+    .quoteFilter {
+        display: flex;
+        flex-direction: column;
     }
 
     .quoteTitle {
@@ -143,6 +163,10 @@ select:focus {
         background-image: url('../../assets/images/quote_mobile.png');
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    .quoteFilter {
+        background: none;
     }
 
     .quoteTitle {

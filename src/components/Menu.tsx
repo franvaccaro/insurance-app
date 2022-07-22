@@ -2,7 +2,11 @@ import React from 'react';
 import './styles/menu.css';
 import chevron from '../assets/icons/Menu_Chevron.svg';
 
-const Menu: React.FC = () => {
+interface navMenuModel {
+  menuClass: string
+}
+
+const Menu: React.FC<navMenuModel> = ({ menuClass }) => {
   const dropdownArr = [
     {
       title: 'Sports',
@@ -45,8 +49,10 @@ const Menu: React.FC = () => {
     },
   ];
 
+  // eslint-disable-next-line no-unused-vars
+
   return (
-    <div className="menu">
+    <div className={`menu ${menuClass}`}>
       {
         dropdownArr.map((item) => (
           <div className="menu-item" key={item.title}>

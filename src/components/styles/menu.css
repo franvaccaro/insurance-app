@@ -13,9 +13,37 @@
     gap: 10px;
 }
 
-.inactive {
-    display: none;
+.navMenuActive {
+    animation: navMenu 0.6s;
+    visibility: visible;
 }
+
+@keyframes navMenu {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.94;
+    }
+}
+
+.navMenuInactive {
+    animation: exitNavMenu 0.6s;
+    transition: 0.6s;
+    visibility: hidden;
+}
+
+@keyframes exitNavMenu {
+    from {
+        opacity: 0.94;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
 
 .menu-item {
     display: flex;

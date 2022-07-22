@@ -1,11 +1,13 @@
 import React from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { useDispatch } from 'react-redux';
 import './styles/choose.css';
 import CardList from './CardList';
 import arrowbtn from '../assets/icons/Arrow_Btn.svg';
 
 const Choose: React.FC = () => {
   const mobile = useMediaQuery('(max-width:650px)');
+  const dispatch = useDispatch();
 
   return (
     <section className="choose" id="choose">
@@ -32,13 +34,24 @@ const Choose: React.FC = () => {
             )
         }
         <CardList />
-        <a href="/" className="chooseViewAll">
-          {'View all '}
-          {
-            !mobile
-            && <img src={arrowbtn} alt="" />
-          }
-        </a>
+        <div className="chooseViewAll">
+          <button
+            type="button"
+            onClick={() => dispatch({
+              type: 'ADD_NOTIFICATION',
+              payload: {
+                id: Date.now(),
+                message: 'This is a prototype.',
+              },
+            })}
+          >
+            View all
+            {
+              !mobile
+              && <img src={arrowbtn} alt="" />
+            }
+          </button>
+        </div>
       </div>
     </section>
   );

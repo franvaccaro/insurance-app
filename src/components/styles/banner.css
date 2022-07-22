@@ -64,6 +64,10 @@
     transition: 0.3s ease-in-out;
 }
 
+.banner-btn:hover {
+    transform: scale(1.1);
+}
+
 .banner-btn>a {
     width: 100%;
     height: 100%;
@@ -124,5 +128,9 @@
         background-color: var(--color-primary);
         border-radius: 8px;
         cursor: pointer;
+    }
+
+    .banner-btn:hover {
+        transform: none;
     }
 }

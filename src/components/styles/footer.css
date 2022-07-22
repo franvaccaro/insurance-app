@@ -81,6 +81,14 @@
     gap: 1vw;
 }
 
+.ItemIcon {
+    transition: 0.3s ease-in-out;
+}
+
+.ItemIcon:hover {
+    transform: scale(1.1);
+}
+
 .ItemData {
     display: flex;
     flex-direction: column;
@@ -117,6 +125,14 @@
     gap: 25px;
 }
 
+.socialIcons>input {
+    transition: 0.3s ease-in-out;
+}
+
+.socialIcons>input:hover {
+    transform: scale(1.2);
+}
+
 /* Credits */
 
 .footerCredits {
@@ -126,6 +142,25 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    color: var(--color-credits);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.footerCreditsItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footerCreditsItem>button {
+    cursor: pointer;
+    font-family: 'Montserrat';
+    background: none;
+    border: none;
     color: var(--color-credits);
     font-weight: 500;
     font-size: 16px;
@@ -213,8 +248,16 @@
         font-size: 10px;
     }
 
-    .footerCredits {
+    .footerCreditsItem>button {
         font-size: 9px;
         line-height: 16px;
+    }
+
+    .ItemIcon:hover {
+        transform: none;
+    }
+
+    .socialIcons>input:hover {
+        transform: none;
     }
 }

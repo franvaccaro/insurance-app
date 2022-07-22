@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles/menuMobile.css';
 import { useDispatch } from 'react-redux';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -19,7 +19,6 @@ const MenuMobile = () => {
   const dispatch = useDispatch();
   const [menuClass, setMenuClass] = useState('menuActive');
   const mobile = useMediaQuery('(max-width:650px)');
-  const timer: React.MutableRefObject<any> = useRef(null);
 
   const menuTransition = (e: React.MouseEvent<HTMLInputElement, MouseEvent>) => {
     e.preventDefault();
@@ -28,7 +27,7 @@ const MenuMobile = () => {
 
   useEffect(() => {
     if (menuClass === 'menuClosed') {
-      timer.current = setInterval(() => {
+      setTimeout(() => {
         dispatch({
           type: 'SET_MOBILEMENU',
           payload: {
@@ -37,9 +36,6 @@ const MenuMobile = () => {
         });
       }, 1000);
     }
-    return () => {
-      clearInterval(timer.current);
-    };
   }, [menuClass]);
 
   return (

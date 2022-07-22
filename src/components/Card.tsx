@@ -24,8 +24,8 @@ const Card: React.FC<CardModel> = ({ title, text, bg }) => {
         <div className="Card-arrow">
           {
             mobile
-              ? <input type="image" src={arrowMobile} alt="" />
-              : <input type="image" src={arrow} alt="" />
+              ? <img src={arrowMobile} alt="" />
+              : <img src={arrow} alt="" />
           }
         </div>
       </div>

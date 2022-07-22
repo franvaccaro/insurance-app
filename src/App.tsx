@@ -10,12 +10,14 @@ import Quote from './components/Quote';
 import Subscribe from './components/Subscribe';
 import Footer from './components/Footer';
 import MenuMobile from './components/MenuMobile';
+import Snackbar from './components/Snackbar';
 
 function App() {
   const menuState = useSelector((state: RootState) => state.mobileMenu.menuState);
 
   return (
     <div className="App">
+      <Snackbar />
       {menuState && <MenuMobile />}
       <NavBar />
       <Banner />

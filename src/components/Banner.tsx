@@ -1,5 +1,6 @@
 import useMediaQuery from '@mui/material/useMediaQuery';
 import React from 'react';
+import FadeInRight from './fades/FadeInRight';
 import './styles/banner.css';
 
 const Banner: React.FC = () => {
@@ -8,7 +9,7 @@ const Banner: React.FC = () => {
   return (
     <section className="bannerContainer b1">
       <div className="bannerData bannerFilter">
-        <div className="bannerText">
+        <FadeInRight extClass="bannerText">
           <h2>
             We take fun
             <br />
@@ -38,14 +39,15 @@ const Banner: React.FC = () => {
               </p>
             )
           }
-        </div>
-        <div className="banner-btn-container">
+        </FadeInRight>
+
+        <FadeInRight extClass="banner-btn-container">
           <div className="banner-btn">
             <a href="#steps">
               GET STARTED
             </a>
           </div>
-        </div>
+        </FadeInRight>
       </div>
     </section>
   );

@@ -36,7 +36,7 @@
     font-size: 36px;
 }
 
-.chooseContainer>p {
+.chooseText {
     color: var(--color-text-dark);
     width: 550px;
     font-weight: 400;
@@ -98,7 +98,7 @@
         width: 40px;
     }
 
-    .chooseContainer>p {
+    .chooseText {
         color: var(--color-text-secondary);
         width: 300px;
         font-size: 12px;

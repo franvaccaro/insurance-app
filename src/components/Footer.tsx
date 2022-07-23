@@ -20,6 +20,7 @@ import yt from '../assets/icons/Social_YT.svg';
 import ytMobile from '../assets/icons/Social_YT_mobile.svg';
 import linkedin from '../assets/icons/Social_IN.svg';
 import inMobile from '../assets/icons/Social_IN_mobile.svg';
+import FadeInSection from './fades/FadeInSection';
 
 const Footer: React.FC = () => {
   const dispatch = useDispatch();
@@ -43,7 +44,7 @@ const Footer: React.FC = () => {
 
     <section className="footer" id="footer">
       <div className="footerData">
-        <div className="footerDataLogo">
+        <FadeInSection extClass="footerDataLogo">
           <div>
             <input
               type="image"
@@ -53,8 +54,8 @@ const Footer: React.FC = () => {
             />
           </div>
           <p>Dedicated to insuring the world&apos;s fun</p>
-        </div>
-        <div className="footerDataContact">
+        </FadeInSection>
+        <FadeInSection extClass="footerDataContact">
           <div className="contactTitle">
             <h2>NEED ASISTANCE?</h2>
             <div className="contactDivider" />
@@ -103,8 +104,8 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="footerDataSocial">
+        </FadeInSection>
+        <FadeInSection extClass="footerDataSocial">
           <div className="socialIcons">
             <input
               type="image"
@@ -137,7 +138,7 @@ const Footer: React.FC = () => {
               onClick={() => footerDispatch()}
             />
           </div>
-        </div>
+        </FadeInSection>
       </div>
       <div className="footerCredits">
         <div className="footerCreditsItem">

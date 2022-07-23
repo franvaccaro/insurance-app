@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import './styles/choose.css';
 import CardList from './CardList';
 import arrowbtn from '../assets/icons/Arrow_Btn.svg';
+import FadeInSection from './fades/FadeInSection';
 
 const Choose: React.FC = () => {
   const mobile = useMediaQuery('(max-width:650px)');
@@ -12,29 +13,31 @@ const Choose: React.FC = () => {
   return (
     <section className="choose" id="choose">
       <div className="chooseContainer">
-        <div className="chooseTitle">
+        <FadeInSection extClass="chooseTitle">
           <h2>CHOOSE YOUR INSURANCE</h2>
           <div className="chooseDivider" />
-        </div>
-        {
-          mobile
-            ? (
-              <p>
-                Check our programs, designed for non-sports activities.
-                Coverage provided includes important liability protection for the organization.
-              </p>
-            )
-            : (
-              <p>
-                <b>{'K&K '}</b>
-                has different programs, designed for youth or adult non-sports activities.
-                Coverage provided includes important liability protection for the organization,
-                including its employees and volunteers.
-              </p>
-            )
-        }
+        </FadeInSection>
+        <FadeInSection extClass="chooseText">
+          {
+            mobile
+              ? (
+                <p>
+                  Check our programs, designed for non-sports activities.
+                  Coverage provided includes important liability protection for the organization.
+                </p>
+              )
+              : (
+                <p>
+                  <b>{'K&K '}</b>
+                  has different programs, designed for youth or adult non-sports activities.
+                  Coverage provided includes important liability protection for the organization,
+                  including its employees and volunteers.
+                </p>
+              )
+          }
+        </FadeInSection>
         <CardList />
-        <div className="chooseViewAll">
+        <FadeInSection extClass="chooseViewAll">
           <button
             type="button"
             onClick={() => dispatch({
@@ -51,7 +54,7 @@ const Choose: React.FC = () => {
               && <img src={arrowbtn} alt="" />
             }
           </button>
-        </div>
+        </FadeInSection>
       </div>
     </section>
   );

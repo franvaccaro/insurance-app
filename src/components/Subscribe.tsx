@@ -2,6 +2,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import React, { useState } from 'react';
 import './styles/subscribe.css';
 import { useDispatch } from 'react-redux';
+import FadeInSection from './fades/FadeInSection';
 
 const Subscribe: React.FC = () => {
   const dispatch = useDispatch();
@@ -14,17 +15,17 @@ const Subscribe: React.FC = () => {
       type: 'ADD_NOTIFICATION',
       payload: {
         id: Date.now(),
-        message: "This is a prototype. You didn't subscribe to anything! 👍",
+        message: "This is a prototype. You haven't been subscribed to anything! 👍",
       },
     });
   };
 
   return (
     <section className="subs">
-      <div className="subsTitle">
+      <FadeInSection extClass="subsTitle">
         <h2>SUBSCRIBE TO NEWSLETTER</h2>
         <div className="subsDivider" />
-      </div>
+      </FadeInSection>
       <div className="subsInputSection">
         <div className="subsInputContainer">
           <input

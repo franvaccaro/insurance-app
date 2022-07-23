@@ -11,6 +11,7 @@ import search from '../assets/icons/Search.svg';
 import login from '../assets/icons/Login.svg';
 import drop from '../assets/icons/Dropdown_Icon.svg';
 import Menu from './Menu';
+import FadeInSection from './fades/FadeInSection';
 
 const NavBar: React.FC = () => {
   const dispatch = useDispatch();
@@ -48,15 +49,15 @@ const NavBar: React.FC = () => {
 
   return (
     <nav>
-      <div className="logo">
+      <FadeInSection extClass="logo">
         <input
           type="image"
           src={logo}
           alt=""
           onClick={() => window.scrollTo(0, 0)}
         />
-      </div>
-      <div className="navItems">
+      </FadeInSection>
+      <FadeInSection extClass="navItems">
         <div className="nav-dropdown">
           <button
             type="button"
@@ -78,9 +79,9 @@ const NavBar: React.FC = () => {
         <div className="nav-login">
           <img src={login} alt="login" />
         </div>
-      </div>
+      </FadeInSection>
 
-      <div className="navMobile">
+      <FadeInSection extClass="navMobile">
         <div className="loginMobile">
           <input type="image" src={loginMobile} alt="" />
         </div>
@@ -105,7 +106,7 @@ const NavBar: React.FC = () => {
             })}
           />
         </div>
-      </div>
+      </FadeInSection>
     </nav>
   );
 };

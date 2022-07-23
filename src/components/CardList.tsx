@@ -2,6 +2,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import React from 'react';
 import './styles/choose.css';
 import Card from './Card';
+import FadeInSection from './fades/FadeInSection';
 
 function CardList() {
   const mobile = useMediaQuery('(max-width:650px)');
@@ -53,7 +54,7 @@ function CardList() {
   ];
 
   return (
-    <div className="chooseCardContainer">
+    <FadeInSection extClass="chooseCardContainer">
       {
         mobile
           ? dataMobile.map((data) => (
@@ -63,7 +64,7 @@ function CardList() {
             <Card title={data.title} text={data.text} bg={data.bg} key={data.bg} />
           ))
       }
-    </div>
+    </FadeInSection>
   );
 }
 

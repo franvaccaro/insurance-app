@@ -11,6 +11,8 @@ import step3m from '../assets/icons/Steps_3_Mobile.svg';
 import step1 from '../assets/icons/Steps_1.svg';
 import step2 from '../assets/icons/Steps_2.svg';
 import step3 from '../assets/icons/Steps_3.svg';
+import FadeInRight from './fades/FadeInRight';
+import FadeInSection from './fades/FadeInSection';
 
 const Claims: React.FC = () => {
   const mobile = useMediaQuery('(max-width:650px)');
@@ -18,7 +20,7 @@ const Claims: React.FC = () => {
   return (
     <section className="claims" id="claims">
       <div className="claimsBanner">
-        <div className="claimsData">
+        <FadeInRight extClass="claimsData">
           <div className="claimsTitle">
             <h2>CLAIMS</h2>
             <div className="claimsDivider" />
@@ -29,20 +31,20 @@ const Claims: React.FC = () => {
             is known for the exceptional service that our in-house Claims
             Department.
           </p>
-        </div>
-        <div className="claimsData">
+        </FadeInRight>
+        <FadeInRight extClass="claimsData">
           <div className="claimsTitle">
             <h2>
               AGENT EXPERIENCE
             </h2>
             <div className="claimsDivider" />
           </div>
-          <p>
+          <p id="steps">
             Our experienced representatives understand the daily issues that
             impact sports, leisure and entertainment organizations.
           </p>
-        </div>
-        <div className="claimsCardList">
+        </FadeInRight>
+        <FadeInSection extClass="claimsCardList">
           <div className="claimsCard">
             <img src={claims1} alt="" />
             <h2>Easy Claim System</h2>
@@ -63,9 +65,9 @@ const Claims: React.FC = () => {
             <h2>Strongly Secured</h2>
             <p>We can secure your precious assets</p>
           </div>
-        </div>
+        </FadeInSection>
       </div>
-      <div className="steps-Section" id="steps">
+      <FadeInSection extClass="steps-Section">
         <div className="stepsTitle">
           <h2>GET INSURED IN 3 STEPS!</h2>
           <div className="stepsDivider" />
@@ -84,7 +86,7 @@ const Claims: React.FC = () => {
             Select your plan and get insured
           </div>
         </div>
-      </div>
+      </FadeInSection>
     </section>
   );
 };

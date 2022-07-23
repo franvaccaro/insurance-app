@@ -5,9 +5,6 @@ import claims1 from '../assets/icons/Claims_1.svg';
 import claims2 from '../assets/icons/Claims_2.svg';
 import claims3 from '../assets/icons/Claims_3.svg';
 import claims4 from '../assets/icons/Claims_4.svg';
-import step1m from '../assets/icons/Steps_1_Mobile.svg';
-import step2m from '../assets/icons/Steps_2_Mobile.svg';
-import step3m from '../assets/icons/Steps_3_Mobile.svg';
 import step1 from '../assets/icons/Steps_1.svg';
 import step2 from '../assets/icons/Steps_2.svg';
 import step3 from '../assets/icons/Steps_3.svg';
@@ -46,22 +43,22 @@ const Claims: React.FC = () => {
         </FadeInRight>
         <FadeInSection extClass="claimsCardList">
           <div className="claimsCard">
-            <img src={claims1} alt="" />
+            <img src={claims1} width="60" height="61" alt="" />
             <h2>Easy Claim System</h2>
             <p>Express your desires and needs to us</p>
           </div>
           <div className="claimsCard">
-            <img src={claims2} alt="" />
+            <img src={claims2} width="61" height="61" alt="" />
             <h2>Easy Installments</h2>
             <p>Less complicated payment system</p>
           </div>
           <div className="claimsCard">
-            <img src={claims3} alt="" />
+            <img src={claims3} width="61" height="61" alt="" />
             <h2>24x7 Support</h2>
             <p>You are our most important priority</p>
           </div>
           <div className="claimsCard">
-            <img src={claims4} alt="" />
+            <img src={claims4} width="57" height="57" alt="" />
             <h2>Strongly Secured</h2>
             <p>We can secure your precious assets</p>
           </div>
@@ -74,15 +71,30 @@ const Claims: React.FC = () => {
         </div>
         <div className="stepsList">
           <div className="stepsItem">
-            <img src={mobile ? step1m : step1} alt="" />
+            <img
+              src={step1}
+              alt=""
+              width={mobile ? '32' : '80'}
+              height={mobile ? '32' : '80'}
+            />
             Enter your personal information
           </div>
           <div className="stepsItem">
-            <img src={mobile ? step2m : step2} alt="" />
+            <img
+              src={step2}
+              alt=""
+              width={mobile ? '32' : '80'}
+              height={mobile ? '32' : '80'}
+            />
             Choose your category
           </div>
           <div className="stepsItem">
-            <img src={mobile ? step3m : step3} alt="" />
+            <img
+              src={step3}
+              alt=""
+              width={mobile ? '32' : '80'}
+              height={mobile ? '32' : '80'}
+            />
             Select your plan and get insured
           </div>
         </div>

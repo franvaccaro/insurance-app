@@ -3,23 +3,14 @@ import './styles/footer.css';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useDispatch } from 'react-redux';
 import logo from '../assets/icons/Logo_footer.svg';
-import logoMobile from '../assets/icons/Logo_footer_mobile.svg';
 import email from '../assets/icons/Email.svg';
-import emailMobile from '../assets/icons/Email_mobile.svg';
 import phone from '../assets/icons/Phone.svg';
-import phoneMobile from '../assets/icons/Phone_mobile.svg';
 import address from '../assets/icons/Address.svg';
-import addressMobile from '../assets/icons/Address_mobile.svg';
 import fb from '../assets/icons/Social_FB.svg';
-import fbMobile from '../assets/icons/Social_FB_mobile.svg';
 import tw from '../assets/icons/Social_TW.svg';
-import twMobile from '../assets/icons/Social_TW_mobile.svg';
 import ig from '../assets/icons/Social_IG.svg';
-import igMobile from '../assets/icons/Social_IG_mobile.svg';
 import yt from '../assets/icons/Social_YT.svg';
-import ytMobile from '../assets/icons/Social_YT_mobile.svg';
 import linkedin from '../assets/icons/Social_IN.svg';
-import inMobile from '../assets/icons/Social_IN_mobile.svg';
 import FadeInSection from './fades/FadeInSection';
 
 const Footer: React.FC = () => {
@@ -48,7 +39,9 @@ const Footer: React.FC = () => {
           <div>
             <input
               type="image"
-              src={mobile2 ? logoMobile : logo}
+              src={logo}
+              width={mobile2 ? '101' : '297'}
+              height={mobile2 ? '16' : '47'}
               alt="logo"
               onClick={() => footerDispatch()}
             />
@@ -65,7 +58,9 @@ const Footer: React.FC = () => {
               <div className="ItemIcon">
                 <input
                   type="image"
-                  src={mobile ? emailMobile : email}
+                  src={email}
+                  width={mobile ? '24' : '48'}
+                  height={mobile ? '24' : '48'}
                   alt="email"
                   onClick={() => footerDispatch()}
                 />
@@ -79,7 +74,9 @@ const Footer: React.FC = () => {
               <div className="ItemIcon">
                 <input
                   type="image"
-                  src={mobile ? phoneMobile : phone}
+                  src={phone}
+                  width={mobile ? '24' : '48'}
+                  height={mobile ? '24' : '48'}
                   alt="phone"
                   onClick={() => footerDispatch()}
                 />
@@ -93,7 +90,9 @@ const Footer: React.FC = () => {
               <div className="ItemIcon">
                 <input
                   type="image"
-                  src={mobile ? addressMobile : address}
+                  src={address}
+                  width={mobile ? '24' : '48'}
+                  height={mobile ? '24' : '48'}
                   alt="address"
                   onClick={() => footerDispatch()}
                 />
@@ -109,31 +108,41 @@ const Footer: React.FC = () => {
           <div className="socialIcons">
             <input
               type="image"
-              src={mobile ? fbMobile : fb}
+              src={fb}
+              width={mobile2 ? '16' : '32'}
+              height={mobile2 ? '16' : '32'}
               alt="fb"
               onClick={() => footerDispatch()}
             />
             <input
               type="image"
-              src={mobile ? twMobile : tw}
+              src={tw}
+              width={mobile2 ? '16' : '32'}
+              height={mobile2 ? '16' : '32'}
               alt="tw"
               onClick={() => footerDispatch()}
             />
             <input
               type="image"
-              src={mobile ? igMobile : ig}
+              src={ig}
+              width={mobile2 ? '16' : '32'}
+              height={mobile2 ? '16' : '32'}
               alt="ig"
               onClick={() => footerDispatch()}
             />
             <input
               type="image"
-              src={mobile ? ytMobile : yt}
+              src={yt}
+              width={mobile2 ? '16' : '32'}
+              height={mobile2 ? '16' : '32'}
               alt="yt"
               onClick={() => footerDispatch()}
             />
             <input
               type="image"
-              src={mobile ? inMobile : linkedin}
+              src={linkedin}
+              width={mobile2 ? '16' : '32'}
+              height={mobile2 ? '16' : '32'}
               alt="in"
               onClick={() => footerDispatch()}
             />

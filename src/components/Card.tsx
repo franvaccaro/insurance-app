@@ -15,17 +15,15 @@ const Card: React.FC<CardModel> = ({ title, text, bg }) => {
 
   return (
     <div className="Card">
-      <div className={bg}>
-        <div className="Card-filter" />
-      </div>
+      <div className={bg} />
       <div className="Card-data">
         <h3>{title}</h3>
         <p>{text}</p>
         <div className="Card-arrow">
           {
             mobile
-              ? <img src={arrowMobile} alt="" />
-              : <img src={arrow} alt="" />
+              ? <img src={arrowMobile} width="12" height="8" alt="" />
+              : <img src={arrow} width="26" height="16" alt="" />
           }
         </div>
       </div>

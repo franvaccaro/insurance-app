@@ -1,7 +1,6 @@
 import React from 'react';
 import './styles/quote.css';
 import { useDispatch } from 'react-redux';
-import FadeInRight from './fades/FadeInRight';
 import FadeInSection from './fades/FadeInSection';
 
 const Quote: React.FC = () => {
@@ -22,10 +21,10 @@ const Quote: React.FC = () => {
     <section className="quote" id="quote">
       <div className="quoteFilter">
         <div className="quoteContainer1">
-          <FadeInRight extClass="quoteTitle">
+          <FadeInSection extClass="quoteTitle">
             <h2>GET A QUOTE</h2>
             <div className="quoteDivider" />
-          </FadeInRight>
+          </FadeInSection>
         </div>
         <FadeInSection extClass="quoteContainer2">
           <form className="quoteForm">

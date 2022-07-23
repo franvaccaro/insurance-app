@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-image: url('../../assets/images/quote.jpg');
+    background-image: url('../../assets/images/quote.webp');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -160,7 +160,7 @@ select:focus {
 
 @media screen and (max-width: 650px) {
     .quote {
-        background-image: url('../../assets/images/quote_mobile.png');
+        background-image: url('../../assets/images/quote_mobile.webp');
         background-repeat: no-repeat;
         background-size: cover;
     }

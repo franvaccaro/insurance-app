@@ -43,7 +43,9 @@ function Snackbar() {
             <input
               type="image"
               src={close}
-              alt=""
+              width="25"
+              height="25"
+              alt="close"
               onClick={() => dispatch({
                 type: 'DELETE_NOTIFICATION',
                 payload: {

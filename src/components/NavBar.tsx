@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import type { RootState } from '../redux/store';
 import loginMobile from '../assets/icons/Login_mobile.svg';
-import logoMobile from '../assets/icons/Logo_mobile.svg';
 import logo from '../assets/icons/Logo.svg';
 import menu from '../assets/icons/Menu.svg';
 import search from '../assets/icons/Search.svg';
@@ -53,7 +52,9 @@ const NavBar: React.FC = () => {
         <input
           type="image"
           src={logo}
-          alt=""
+          width="185"
+          height="30"
+          alt="Logo"
           onClick={() => window.scrollTo(0, 0)}
         />
       </FadeInSection>
@@ -64,7 +65,7 @@ const NavBar: React.FC = () => {
             onClick={(e) => handleMenuClick(e)}
           >
             {'INSURANCE & COVERAGE '}
-            <img src={drop} alt="drop" />
+            <img src={drop} width="12" height="8" alt="drop" />
           </button>
           {navMenuState && <Menu menuClass={navMenuClass} />}
         </div>
@@ -74,21 +75,29 @@ const NavBar: React.FC = () => {
         <a href="#footer">CONTACT</a>
         <div>|</div>
         <div className="nav-search">
-          <img src={search} alt="search" />
+          <img src={search} width="16" height="16" alt="search" />
         </div>
         <div className="nav-login">
-          <img src={login} alt="login" />
+          <img src={login} width="18" height="16" alt="login" />
         </div>
       </FadeInSection>
 
       <FadeInSection extClass="navMobile">
         <div className="loginMobile">
-          <input type="image" src={loginMobile} alt="" />
+          <input
+            type="image"
+            src={loginMobile}
+            width="24"
+            height="24"
+            alt="Login"
+          />
         </div>
         <div className="logoMobile">
           <input
             type="image"
-            src={mobile ? logoMobile : logo}
+            src={logo}
+            width={mobile ? '102' : '185'}
+            height={mobile ? '16' : '30'}
             alt="logo"
             onClick={() => window.scrollTo(0, 0)}
           />
@@ -97,7 +106,9 @@ const NavBar: React.FC = () => {
           <input
             type="image"
             src={menu}
-            alt=""
+            width="18"
+            height="12"
+            alt="Menu"
             onClick={() => dispatch({
               type: 'SET_MOBILEMENU',
               payload: {

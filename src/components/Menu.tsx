@@ -57,7 +57,7 @@ const Menu: React.FC<navMenuModel> = ({ menuClass }) => {
         dropdownArr.map((item) => (
           <div className="menu-item" key={item.title}>
             {item.title}
-            <img src={chevron} alt="go" />
+            <img src={chevron} width="8" height="12" alt="go" />
           </div>
         ))
       }

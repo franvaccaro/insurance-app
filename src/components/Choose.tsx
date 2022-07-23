@@ -51,7 +51,7 @@ const Choose: React.FC = () => {
             View all
             {
               !mobile
-              && <img src={arrowbtn} alt="" />
+              && <img src={arrowbtn} width="28" height="18" alt="arrow" />
             }
           </button>
         </FadeInSection>

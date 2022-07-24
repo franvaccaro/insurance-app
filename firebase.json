@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "kinsurance",
     "public": "public",
     "ignore": [
       "firebase.json",

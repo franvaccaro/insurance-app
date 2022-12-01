@@ -15,8 +15,30 @@ const Claims: React.FC = () => {
   const mobile = useMediaQuery('(max-width:650px)');
 
   return (
-    <section className="claims" id="claims">
-      <div className="claimsBanner">
+    <section className="claims">
+      <FadeInSection extClass="claimsCardList">
+        <div className="claimsCard">
+          <img src={claims1} width="60" height="61" alt="" />
+          <h2>Easy Claim System</h2>
+          <p>Express your desires and needs to us</p>
+        </div>
+        <div className="claimsCard">
+          <img src={claims2} width="61" height="61" alt="" />
+          <h2>Easy Installments</h2>
+          <p>Less complicated payment system</p>
+        </div>
+        <div className="claimsCard">
+          <img src={claims3} width="61" height="61" alt="" />
+          <h2>24x7 Support</h2>
+          <p>You are our most important priority</p>
+        </div>
+        <div className="claimsCard">
+          <img src={claims4} width="57" height="57" alt="" />
+          <h2>Strongly Secured</h2>
+          <p>We can secure your precious assets</p>
+        </div>
+      </FadeInSection>
+      <div className="claimsBanner" id="claims">
         <FadeInRight extClass="claimsData">
           <div className="claimsTitle">
             <h2>CLAIMS</h2>
@@ -41,28 +63,6 @@ const Claims: React.FC = () => {
             impact sports, leisure and entertainment organizations.
           </p>
         </FadeInRight>
-        <FadeInSection extClass="claimsCardList">
-          <div className="claimsCard">
-            <img src={claims1} width="60" height="61" alt="" />
-            <h2>Easy Claim System</h2>
-            <p>Express your desires and needs to us</p>
-          </div>
-          <div className="claimsCard">
-            <img src={claims2} width="61" height="61" alt="" />
-            <h2>Easy Installments</h2>
-            <p>Less complicated payment system</p>
-          </div>
-          <div className="claimsCard">
-            <img src={claims3} width="61" height="61" alt="" />
-            <h2>24x7 Support</h2>
-            <p>You are our most important priority</p>
-          </div>
-          <div className="claimsCard">
-            <img src={claims4} width="57" height="57" alt="" />
-            <h2>Strongly Secured</h2>
-            <p>We can secure your precious assets</p>
-          </div>
-        </FadeInSection>
       </div>
       <FadeInSection extClass="steps-Section">
         <div className="stepsTitle">

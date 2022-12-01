@@ -1,7 +1,7 @@
 .choose {
     display: flex;
     flex-direction: column;
-    min-height: 94vh;
+    min-height: 45rem;
     width: 100%;
 }
 

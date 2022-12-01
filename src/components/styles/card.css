@@ -1,6 +1,6 @@
 .Card {
-    width: 410px;
-    height: 48vh;
+    width: 22rem;
+    height: 28rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,10 +87,24 @@
     background-size: cover;
 }
 
+@media screen and (max-width: 1540px) {
+    .Card {
+        width: 18rem;
+        height: 22rem;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .Card {
+        width: 20rem;
+        height: 22rem;
+    }
+}
+
 @media screen and (max-width: 1050px) {
     .Card {
-        width: 38vw;
-        height: 320px;
+        width: 20rem;
+        height: 22rem;
     }
 
     .Card-data>p {
@@ -100,8 +114,8 @@
 
 @media screen and (max-width: 650px) {
     .Card {
-        width: 42vw;
-        height: 208px;
+        width: 10rem;
+        height: 12rem;
         border-radius: 4px;
     }
 

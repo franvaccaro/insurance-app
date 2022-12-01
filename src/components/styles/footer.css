@@ -1,6 +1,6 @@
 .footer {
     width: 100%;
-    height: 50vh;
+    min-height: 30rem;
     display: flex;
     flex-direction: column;
     padding-left: 7%;
@@ -50,9 +50,9 @@
 
 .contactTitle {
     display: flex;
-    flex: 1;
+    flex: 0.5;
     flex-direction: column;
-    gap: 3vh;
+    gap: 1rem;
 }
 
 .contactTitle>h2 {
@@ -71,7 +71,7 @@
     flex: 1;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 2vh;
+    gap: 1rem;
 }
 
 .contactInfoItem {
@@ -172,7 +172,7 @@
     .footerData {
         flex-direction: column;
         justify-content: center;
-        gap: 2vh;
+        gap: 2rem;
         padding-top: 3vh;
         padding-bottom: 0vh;
     }
@@ -190,7 +190,6 @@
 
     .contactTitle {
         align-items: center;
-        gap: 1vh;
     }
 
     .contactTitle>h2 {

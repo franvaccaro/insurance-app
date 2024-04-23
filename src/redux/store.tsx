@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
 /* eslint-disable no-underscore-dangle */
-import { createStore, applyMiddleware, compose } from 'redux';
+import {
+  createStore, applyMiddleware, compose, StoreEnhancerStoreCreator,
+} from 'redux';
 import thunk from 'redux-thunk';
 import allReducers from './reducers/allReducers';
 
@@ -18,7 +20,7 @@ const enhancers = [applyMiddleware(...middleware), (window.__REDUX_DEVTOOLS_EXTE
 const store = createStore(
   allReducers,
   initialState,
-  compose(...enhancers),
+  compose<StoreEnhancerStoreCreator>(...enhancers),
 );
 
 export type RootState = ReturnType<typeof store.getState>
